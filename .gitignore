@@ -1,0 +1,30 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+fileprintapp
+
+# Test binary
+*.test
+
+# Output of go coverage tool
+*.out
+
+# Environment variables
+.env
+
+# Uploads directory
+uploads/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

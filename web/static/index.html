@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikon_Printz 🖨️ - Upload & Print</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖨️ Ikon_Printz</h1>
+            <p>Upload your files for instant printing</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="folder-input">
+                    <label for="folderName">Folder Name:</label>
+                    <input type="text" id="folderName" placeholder="Enter folder name (e.g., John's Documents)" required>
+                    <small>Create a folder to organize your files</small>
+                </div>
+
+                <div class="file-upload">
+                    <label for="fileInput" class="file-label">
+                        <span class="upload-icon">📤</span>
+                        <span>Choose Files to Upload</span>
+                    </label>
+                    <input type="file" id="fileInput" multiple accept=".jpg,.jpeg,.png,.pdf,.gif">
+                    <div id="fileList" class="file-list"></div>
+                </div>
+
+                <button id="uploadBtn" class="btn btn-primary">Upload Files</button>
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <div class="info-section">
+                <h3>ℹ️ How it works:</h3>
+                <ol>
+                    <li>Enter a folder name to organize your files</li>
+                    <li>Select one or more files (PDF, JPG, PNG, GIF)</li>
+                    <li>Click "Upload Files"</li>
+                    <li>Your files will be available for printing immediately</li>
+                    <li>Admin will print your files and delete them after</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Ikon_Printz. Simple. Fast. Secure.</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/upload.js"></script>
+</body>
+</html>

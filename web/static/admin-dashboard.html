@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Ikon_Printz 🖨️</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖨️ Ikon_Printz Dashboard</h1>
+            <div class="header-info">
+                <div class="connection-status">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span id="connectionStatus">Connecting...</span>
+                </div>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3 id="totalFolders">0</h3>
+                    <p>Folders</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="totalFiles">0</h3>
+                    <p>Files</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="connectionStatus" class="status-disconnected">●</h3>
+                    <p>Live Status</p>
+                </div>
+            </div>
+
+            <div id="foldersContainer" class="folders-container"></div>
+        </main>
+    </div>
+
+    <script src="/static/js/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* Main styles for FilePrint App */
+body {
+    background-color: #f8f9fa;
+    font-size: 16px; /* Better mobile readability */
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile upload area styling */
+.mobile-upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.mobile-upload-area:hover {
+    border-color: #0d6efd;
+    background-color: #f8f9fa;
+}
+
+.mobile-upload-area.dragover {
+    border-color: #198754;
+    background-color: #e8f5e8;
+}
+
+/* Custom file select button */
+#fileSelectButton {
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+/* Upload code display */
+.upload-code-display {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Supported formats dropdown */
+.supported-formats details[open] summary {
+    margin-bottom: 10px;
+}
+
+.supported-formats summary {
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+/* Table styling */
+.table th {
+    border-top: none;
+    font-weight: 600;
+}
+
+.badge {
+    font-size: 0.7em;
+}
+
+.btn-group .btn {
+    margin-right: 2px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    input, select, textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Larger touch targets */
+    .btn-group .btn {
+        padding: 8px 12px;
+        margin: 2px;
+    }
+    
+    /* Better table responsiveness */
+    .table-responsive {
+        font-size: 14px;
+    }
+}
+
+/* iPhone notch safe areas */
+@supports(padding: max(0px)) {
+    .container-fluid, .container {
+        padding-left: max(10px, env(safe-area-inset-left));
+        padding-right: max(10px, env(safe-area-inset-right));
+    }
+}
+
+/* Loading animation */
+.spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Connection status indicator */
+.connection-status {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    z-index: 1000;
+}
+
+.connection-status.connected {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.connection-status.disconnected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* File row transitions */
+.file-row {
+    transition: all 0.3s ease;
+}
+
+.file-row.printed {
+    background-color: #d1edff !important;
+}
